@@ -1,0 +1,36 @@
+<view hidden="{{currentArea !=='recommend'}}" class="recommend">
+  <view class="recommend-title">实战推荐</view>
+  <view class="recommend-no-data" hidden="{{searchResultArray.length}}">
+    暂无数据！！
+  </view>
+  <view class="recommend-item" wx:for="{{searchResultArray}}" wx:key="recommendCourseId">
+    <view class="recommend-item-left">
+      <image class="recommend-item-left-image" src="{{item.recommendItemLeft.recommendItemLeftImage}}" />
+      <view wx:if="{{item.recommendItemLeft.recommendItemLeftProgress}}" class="recommend-item-left-progress">
+        {{item.recommendItemLeft.recommendItemLeftProgress}}
+      </view>
+      <view wx:if="{{item.recommendItemLeft.recommendItemLeftTag}}" class="recommend-item-left-tag">
+        <image class="recommend-item-left-tag-image" src="{{item.recommendItemLeft.recommendItemLeftTag.recommendItemLeftTagImage}}" />
+      </view>
+
+    </view>
+    <view class="recommend-item-content">
+      <view class="recommend-item-content-title">
+        {{item.recommendItemContent.recommendItemContentTitle}}
+      </view>
+      <view class="recommend-item-content-tags">
+        <view wx:if="{{item.recommendItemContent.recommendItemContentTags.recommendItemContentTagsPrice !=='免费'}}" class="recommend-item-content-tags-price {{item.recommendItemContent.recommendItemContentTags.recommendItemContentTagsNotice ?'recommend-item-content-tags-price-active':''}}">
+          ¥{{item.recommendItemContent.recommendItemContentTags.recommendItemContentTagsPrice}}
+        </view>
+        <view wx:else class="recommend-item-content-tags-price">免费</view>
+
+        <view wx:if="{{item.recommendItemContent.recommendItemContentTags.recommendItemContentTagsNotice}}" class="recommend-item-content-tags-notice">{{item.recommendItemContent.recommendItemContentTags.recommendItemContentTagsNotice}}</view>
+        <view class="recommend-item-content-tags-level">{{item.recommendItemContent.recommendItemContentTags.recommendItemContentTagsLevel}}</view>
+        <view class="recommend-item-content-tags-count">{{item.recommendItemContent.recommendItemContentTags.recommendItemContentTagsCount}}</view>
+      </view>
+    </view>
+  </view>
+  <view class="recommend-more" bindtap="recommendMoreTap">
+  查看更多
+  </view>
+</view>

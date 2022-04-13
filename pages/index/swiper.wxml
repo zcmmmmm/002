@@ -1,0 +1,5 @@
+<swiper hidden="{{currentArea !=='recommend'}}" bindchange="swiperItemChange" class="swiper" previous-margin="56rpx" next-margin="56rpx" autoplay="ture" interval="2000" circular="true">
+  <swiper-item wx:key="+this" wx:for="{{swiperImgUrl}}" item-id="{{index+1}}" class="swiper-item {{currentId == index+1 ? 'swiper-item-active':''}}">
+    <image class="swiper-item-image" src="{{item}}"></image>
+  </swiper-item>
+</swiper>

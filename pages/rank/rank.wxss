@@ -1,0 +1,94 @@
+/* pages/rank/rank.wxss */
+.rank-category-active {
+  color: #2b333b;
+}
+.rank-category-active::after {
+  display: block;
+  content: "";
+  width: 32rpx;
+  height: 4rpx;
+  background: #f01414;
+  border-radius: 4rpx;
+  position: relative;
+  left: 56rpx;
+  top: 6rpx;
+}
+.rank-category {
+  height: 88rpx;
+  background-color: #fff;
+  box-shadow: 0 4rpx 8rpx 0 rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.rank-category-left,
+.rank-category-right {
+  font-family: PingFangSC-Regular;
+  font-style: 36rpx;
+  color: #71777d;
+}
+.rank-date {
+  width: 240rpx;
+  height: 64rpx;
+  margin: 40rpx auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  background: #ffffff;
+  border: 1rpx solid #71777d;
+  border-radius: 8rpx;
+}
+.rank-date-week,
+.rank-date-month {
+  width: 114rpx;
+  height: 52rpx;
+  font-family: PingFangSC-Regular;
+  text-align: center;
+  font-size: 28rpx;
+  color: #71777d;
+  line-height: 52rpx;
+}
+.rank-date-active {
+  color: #fff;
+  background: #71777d;
+  border-radius: 6rpx;
+}
+.rank-content {
+  margin-top: 24rpx;
+}
+.rank-content-item {
+  padding-left: 48rpx;
+  padding-right: 48rpx;
+  margin-bottom: 40rpx;
+  display: flex;
+  align-items: center;
+}
+.rank-content-item-image {
+  width: 180rpx;
+  height: 120rpx;
+  border-radius: 8rpx;
+  margin-right: 24rpx;
+}
+.rank-content-item-icon {
+  width: 60rpx;
+  height: 52rpx;
+}
+.rank-content-item-title {
+  display: flex;
+  align-items: center;
+  width: 342rpx;
+  height: 80rpx;
+  margin-right: 48rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 28rpx;
+  color: #2b333b;
+}
+.rank-content-item-number {
+  width: 60rpx;
+  height: 52rpx;
+  font-family: PingFangSC-Regular;
+  font-size: 36rpx;
+  color: #71777d;
+  text-align: center;
+  line-height: 52rpx;
+}

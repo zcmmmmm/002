@@ -1,0 +1,5 @@
+<view hidden="{{currentArea !=='activity'}}" class="activity">
+<view class="activity-item" wx:for="{{activityData}}" wx:key="*this">
+<image class="activity-item-image" src="{{item}}" />
+</view>
+</view>

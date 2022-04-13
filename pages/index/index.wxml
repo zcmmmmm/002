@@ -1,0 +1,16 @@
+<!--index.wxml-->
+<view class="header">
+  <input bindinput="inputChange" type="text" class="header-input" placeholder=" AngularJS · MySQL · Java" placeholder-class="header-input-placeholder" />
+</view>
+<!-- 首页导航栏 -->
+<view class="navigator ">
+  <view wx:for="{{navigatorData}}" wx:key="index" bindtap="navigatorTap" data-name="{{item.name}}" class="navigator-item {{item.className}} {{currentNavigatorName===item.name?'navigator-item-active':''}}">
+    <image class="navigator-item-img" src="{{item.url}}" />{{item.text}}
+  </view>
+</view>
+<!-- 轮播图 -->
+<include src="swiper.wxml"/>
+<!-- 实战推荐 -->
+<include src="recommend.wxml"/>
+<!-- 活动页内容 -->
+<include src="activity.wxml"/>

@@ -1,0 +1,59 @@
+<!--pages/rank/rank.wxml-->
+<view class="rank">
+    <view class="rank-category">
+        <view bindtap="rankTap" data-name="project" class="rank-category-left {{isProject?'rank-category-active':''}}">实战排行</view>
+        <view bindtap="rankTap" data-name="path"  class="rank-category-right {{isPath?'rank-category-active':''}}">路径排行</view>
+    </view>
+    <view class="rank-date">
+        <view bindtap="rankTap" data-name="week"  class="rank-date-week {{isWeek?'rank-date-active':''}} ">周</view>
+        <view bindtap="rankTap" data-name="month"  class="rank-date-month {{isMonth?'rank-date-active':''}}">月</view>
+    </view>
+    <view hidden="{{!(isProject && isWeek)}}" class="rank-project-week rank-content">
+        <view class="rank-content-item" data-id="{{item.courseId}}" bindtap="rankContentItemTap" wx:for="{{rankContentProjectWeekData}}" wx:key="courseId">
+            <image class="rank-content-item-image" src="{{item.courseImage}}" />
+            <view class="rank-content-item-title">
+                {{item.courseTitle}}
+            </view>
+            <image wx:if="{{index===0}}" class="rank-content-item-icon" src="https://markdown-1253389072.cos.ap-nanjing.myqcloud.com/202201211602431.png" />
+            <image wx:if="{{index===1}}" class="rank-content-item-icon" src="https://markdown-1253389072.cos.ap-nanjing.myqcloud.com/202201211602130.png" />
+            <image wx:if="{{index===2}}" class="rank-content-item-icon" src="https://markdown-1253389072.cos.ap-nanjing.myqcloud.com/202201211603672.png" />
+            <view wx:if="{{index>2}}" class="rank-content-item-number">{{index+1}}</view>
+        </view>
+    </view>
+    <view hidden="{{!(isProject && isMonth)}}" class="rank-project-month rank-content">
+        <view class="rank-content-item" wx:for="{{rankContentProjectMonthData}}" wx:key="courseId">
+            <image class="rank-content-item-image" src="{{item.courseImage}}" />
+            <view class="rank-content-item-title">
+                {{item.courseTitle}}
+            </view>
+            <image wx:if="{{index===0}}" class="rank-content-item-icon" src="https://markdown-1253389072.cos.ap-nanjing.myqcloud.com/202201211602431.png" />
+            <image wx:if="{{index===1}}" class="rank-content-item-icon" src="https://markdown-1253389072.cos.ap-nanjing.myqcloud.com/202201211602130.png" />
+            <image wx:if="{{index===2}}" class="rank-content-item-icon" src="https://markdown-1253389072.cos.ap-nanjing.myqcloud.com/202201211603672.png" />
+            <view wx:if="{{index>2}}" class="rank-content-item-number">{{index+1}}</view>
+        </view>
+    </view>
+    <view hidden="{{!(isPath && isWeek)}}" class="rank-path-week rank-content">
+        <view class="rank-content-item" wx:for="{{rankContentPathWeekData}}" wx:key="courseId">
+            <image class="rank-content-item-image" src="{{item.courseImage}}" />
+            <view class="rank-content-item-title">
+                {{item.courseTitle}}
+            </view>
+            <image wx:if="{{index===0}}" class="rank-content-item-icon" src="https://markdown-1253389072.cos.ap-nanjing.myqcloud.com/202201211602431.png" />
+            <image wx:if="{{index===1}}" class="rank-content-item-icon" src="https://markdown-1253389072.cos.ap-nanjing.myqcloud.com/202201211602130.png" />
+            <image wx:if="{{index===2}}" class="rank-content-item-icon" src="https://markdown-1253389072.cos.ap-nanjing.myqcloud.com/202201211603672.png" />
+            <view wx:if="{{index>2}}" class="rank-content-item-number">{{index+1}}</view>
+        </view>
+    </view>
+    <view hidden="{{!(isPath && isMonth)}}" class="rank-path-month rank-content">
+        <view class="rank-content-item" wx:for="{{rankContentPathMonthData}}" wx:key="courseId">
+            <image class="rank-content-item-image" src="{{item.courseImage}}" />
+            <view class="rank-content-item-title">
+                {{item.courseTitle}}
+            </view>
+            <image wx:if="{{index===0}}" class="rank-content-item-icon" src="https://markdown-1253389072.cos.ap-nanjing.myqcloud.com/202201211602431.png" />
+            <image wx:if="{{index===1}}" class="rank-content-item-icon" src="https://markdown-1253389072.cos.ap-nanjing.myqcloud.com/202201211602130.png" />
+            <image wx:if="{{index===2}}" class="rank-content-item-icon" src="https://markdown-1253389072.cos.ap-nanjing.myqcloud.com/202201211603672.png" />
+            <view wx:if="{{index>2}}" class="rank-content-item-number">{{index+1}}</view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,43 @@
+{
+    "pages": [
+        "pages/index/index",
+        "pages/cart/cart",
+        "pages/personal/personal",
+        "pages/rank/rank",
+        "pages/course/course"
+    ],
+    "window": {
+        "backgroundTextStyle": "light",
+        "navigationBarBackgroundColor": "#fff",
+        "navigationBarTitleText": "上课",
+        "navigationBarTextStyle": "black"
+    },
+    "tabBar": {
+        "borderStyle": "black",
+        "position": "bottom",
+        "selectedColor": "#2b333b",
+        "color": "#b7bbbf",
+        "list": [
+            {
+                "iconPath": "resources/home.png",
+                "selectedIconPath": "resources/home-active.png",
+                "pagePath": "pages/index/index",
+                "text": "首页"
+            },
+            {
+                "iconPath": "resources/cart.png",
+                "selectedIconPath": "resources/cart-active.png",
+                "pagePath": "pages/cart/cart",
+                "text": "购物车"
+            },
+            {
+                "iconPath": "resources/user.png",
+                "selectedIconPath": "resources/user-active.png",
+                "pagePath": "pages/personal/personal",
+                "text": "我的"
+            }
+        ]
+    },
+    "style": "v2",
+    "sitemapLocation": "sitemap.json"
+}
